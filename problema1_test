@@ -1,0 +1,36 @@
+require 'test/unit'
+require_relative "problema1"
+
+class MyTest < Test::Unit::TestCase
+
+  # Called before every test method runs. Can be used to set up fixture information.
+  def setup
+    # Do nothing
+  end
+
+  # Called after every test method runs. Can be used to tear down fixture information.
+  def teardown
+    # Do nothing
+  end
+
+  def test_simplu
+     assert_equal(30, even_sum([10, 5, 20, 411]))
+  end
+
+  def test_array_gol
+    assert_equal(0, even_sum([]))
+  end
+
+  def test_array_impare
+    assert_equal(0, even_sum([111, 33, 5, 77, 999]))
+  end
+
+  def test_array_pare
+    assert_equal(20, even_sum([2,4,6,8]))
+  end
+
+  def test_array_cu_negative
+    assert_equal(0, even_sum([-2, 11 , 9, 22, -10, -10 ]))
+  end
+
+end
