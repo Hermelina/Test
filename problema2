@@ -1,0 +1,27 @@
+def identifica(array)
+  raise Exception.new("Array prea mic") if array.length < 2
+
+   largest1 = array[0]
+   largest2 = array[1]
+
+    if largest1 < largest2 then
+        temp = largest1
+        largest1 = largest2
+        largest2 = temp
+    end
+
+    array[2 .. -1].each { |a|
+        if a >= largest1 then
+            largest2 = largest1
+            largest1 = a
+        elsif a > largest2
+            largest2 = a
+        end
+    }
+  return largest1, largest2
+end
+
+
+# loc1, loc2 = identifica([2, 4, 5, 1, 4, 12, 4, 9])
+# print "Nr sunt #{loc1}, #{loc2};"
+
