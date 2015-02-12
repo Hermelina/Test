@@ -1,0 +1,15 @@
+
+#  def even_sum0(a)
+#    suma = 0
+#    a.each { |i|
+#      if i%2 == 0 then suma += i end
+#    }
+#    suma
+#  end
+
+  def even_sum(a)
+    a.find_all { |i| i%2 == 0 }.inject(0){|sum,x| sum + x }
+  end
+
+
+# print "Suma array este " + even_sum([10, 3, 20, 41111]).to_s
