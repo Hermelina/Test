@@ -1,0 +1,4 @@
+def duplicate(a)
+  a.each_with_index { |x, i|  if i != a.rindex(x) then return true end}
+  return false
+end
